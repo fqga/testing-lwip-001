@@ -1,0 +1,32 @@
+# Ignorar archivos de configuración de herramientas de desarrollo
+*.launch
+*.settings
+
+# Ignorar archivos de compilación
+*.o
+*.d
+*.su
+*.cyclo
+*.elf
+*.map
+*.bin
+*.hex
+*.srec
+
+# Ignorar directorios de compilación
+**/Debug/
+**/Release/
+
+# Ignorar archivos de configuración del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos de log y temporales
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Ignorar archivos de configuración de IDEs
+.vscode/
+.idea/
