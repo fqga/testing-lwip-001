@@ -48,7 +48,6 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
-extern ip4_addr_t ipaddr;
 
 /* USER CODE END Variables */
 osThreadId defaultTaskHandle;
@@ -132,8 +131,11 @@ void StartDefaultTask(void const * argument)
 
   osDelay(1000);
 
+  ip_addr_t PC_IPADDR;
+  IP_ADDR4(&PC_IPADDR, 192, 168, 100, 246);
+
   struct udp_pcb* my_udp = udp_new();
-  udp_connect(my_udp, &ipaddr, 55151);
+  udp_connect(my_udp, &PC_IPADDR, 55151);
   struct pbuf* udp_buffer = NULL;
 
   /* Infinite loop */
